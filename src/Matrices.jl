@@ -26,7 +26,8 @@ function testMatrices(mVec)
         matrizes_p=[]
         for j in eachindex(vec_matrizes[i])
             if j!=1
-                A=deepcopy(vec_matrizes[i][j]); n=size(A,2)
+                A=deepcopy(vec_matrizes[i][j])
+                n=size(A,2)
                 A[:,n]=sum(A[:,k] for k=2:n)/(n-1)+10^(-5)*A[:,n]
                 push!(matrizes_p,A)
             end
