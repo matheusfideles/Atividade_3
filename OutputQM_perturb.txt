@@ -2,15 +2,75 @@ Quad. min - Norma do resíduo - m=10
 \begin{tabular}{rrrr}
   \hline
   \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
-  5 & 1.269e+00 & 1.269e+00 & 1.269e+00 \\
-  9 & 1.724e-01 & 1.724e-01 & 1.724e-01 \\\hline
+  5 & 1.899e+00 & 1.899e+00 & 1.899e+00 \\
+  9 & 2.213e-01 & 2.213e-01 & 2.213e-01 \\\hline
 \end{tabular}
 
 Quad. min. - Tempo de execução - m=10
 \begin{tabular}{rrrr}
   \hline
   \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
-  5 & 2.394e-05 & 8.410e-06 & 2.664e-05 \\
-  9 & 6.028e-06 & 3.261e-06 & 1.677e-05 \\\hline
+  5 & 1.113e-03 & 1.888e-04 & 2.560e-04 \\
+  9 & 5.444e-06 & 2.541e-06 & 1.444e-05 \\\hline
+\end{tabular}
+
+Quad. min - Norma do resíduo - m=100
+\begin{tabular}{rrrr}
+  \hline
+  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
+  10 & 5.557e+00 & 5.557e+00 & 5.557e+00 \\
+  50 & 4.122e+00 & 4.122e+00 & 4.122e+00 \\
+  90 & 1.494e+00 & 1.494e+00 & 1.494e+00 \\
+  99 & 6.766e-01 & 6.766e-01 & 6.766e-01 \\\hline
+\end{tabular}
+
+Quad. min. - Tempo de execução - m=100
+\begin{tabular}{rrrr}
+  \hline
+  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
+  10 & 5.224e-05 & 3.724e-06 & 1.838e-05 \\
+  50 & 4.212e-05 & 3.385e-04 & 1.527e-04 \\
+  90 & 6.339e-04 & 2.073e-04 & 2.576e-04 \\
+  99 & 1.582e-04 & 2.344e-04 & 5.464e-04 \\\hline
+\end{tabular}
+
+Quad. min - Norma do resíduo - m=1000
+\begin{tabular}{rrrr}
+  \hline
+  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
+  100 & 1.703e+01 & 1.703e+01 & 1.703e+01 \\
+  500 & 1.308e+01 & 1.308e+01 & 1.308e+01 \\
+  900 & 6.246e+00 & 6.246e+00 & 6.246e+00 \\
+  999 & 2.758e-01 & 2.758e-01 & 2.758e-01 \\\hline
+\end{tabular}
+
+Quad. min. - Tempo de execução - m=1000
+\begin{tabular}{rrrr}
+  \hline
+  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
+  100 & 4.785e-04 & 4.813e-04 & 2.630e-03 \\
+  500 & 4.183e-03 & 3.698e-03 & 1.048e-02 \\
+  900 & 2.972e-02 & 1.178e-02 & 2.141e-02 \\
+  999 & 1.648e-02 & 1.421e-02 & 2.407e-02 \\\hline
+\end{tabular}
+
+Quad. min - Norma do resíduo - m=10000
+\begin{tabular}{rrrr}
+  \hline
+  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
+  1000 & 5.487e+01 & 5.487e+01 & 5.487e+01 \\
+  5000 & 4.090e+01 & 4.090e+01 & 4.090e+01 \\
+  9000 & 1.887e+01 & 1.887e+01 & 1.887e+01 \\
+  9999 & 5.973e-01 & 5.973e-01 & 5.973e-01 \\\hline
+\end{tabular}
+
+Quad. min. - Tempo de execução - m=10000
+\begin{tabular}{rrrr}
+  \hline
+  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
+  1000 & 2.009e-01 & 2.559e-01 & 3.645e-01 \\
+  5000 & 5.400e+00 & 4.253e+00 & 5.726e+00 \\
+  9000 & 1.546e+01 & 1.409e+01 & 1.488e+01 \\
+  9999 & 2.023e+01 & 1.703e+01 & 1.617e+01 \\\hline
 \end{tabular}
 

@@ -2,26 +2,125 @@ Norma min. - Norma de x - n=10
 \begin{tabular}{rrr}
   \hline
   \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  1 & 7.850e+01 & 7.850e+01 \\
-  5 & 2.801e+02 & 2.801e+02 \\
-  9 & 2.059e+02 & 2.059e+02 \\\hline
+  1 & 1.378e+02 & 1.378e+02 \\
+  5 & 1.690e+02 & 1.690e+02 \\
+  9 & 3.062e+02 & 3.062e+02 \\\hline
 \end{tabular}
 
 Norma min. - Erro relativo - n=10
 \begin{tabular}{rrr}
   \hline
   \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  1 & 9.086e-16 & 1.115e-16 \\
-  5 & 5.377e-16 & 3.062e-16 \\
-  9 & 1.218e-15 & 5.430e-16 \\\hline
+  1 & 8.846e-16 & 2.967e-16 \\
+  5 & 4.177e-16 & 4.138e-16 \\
+  9 & 6.265e-16 & 8.150e-16 \\\hline
 \end{tabular}
 
 Norma min. - Tempo- n=10
 \begin{tabular}{rrr}
   \hline
   \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  1 & 3.045e-02 & 1.993e-05 \\
-  5 & 6.590e-06 & 1.876e-05 \\
-  9 & 1.064e-05 & 1.912e-05 \\\hline
+  1 & 2.703e-02 & 1.975e-05 \\
+  5 & 5.558e-06 & 1.724e-05 \\
+  9 & 8.833e-06 & 1.727e-05 \\\hline
+\end{tabular}
+
+Norma min. - Norma de x - n=100
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 5.064e+02 & 5.064e+02 \\
+  10 & 8.994e+02 & 8.994e+02 \\
+  50 & 2.163e+03 & 2.163e+03 \\
+  90 & 2.996e+03 & 2.996e+03 \\
+  99 & 4.050e+03 & 4.050e+03 \\\hline
+\end{tabular}
+
+Norma min. - Erro relativo - n=100
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 1.644e-15 & 3.065e-16 \\
+  10 & 3.341e-15 & 4.480e-16 \\
+  50 & 3.208e-15 & 8.248e-16 \\
+  90 & 6.820e-15 & 1.385e-15 \\
+  99 & 7.918e-15 & 3.431e-15 \\\hline
+\end{tabular}
+
+Norma min. - Tempo- n=100
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 3.409e-04 & 2.981e-06 \\
+  10 & 9.923e-05 & 2.308e-05 \\
+  50 & 1.652e-04 & 1.439e-04 \\
+  90 & 2.472e-04 & 2.788e-04 \\
+  99 & 2.702e-04 & 3.293e-04 \\\hline
+\end{tabular}
+
+Norma min. - Norma de x - n=1000
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 6.074e+02 & 6.074e+02 \\
+  100 & 1.066e+04 & 1.066e+04 \\
+  500 & 2.289e+04 & 2.289e+04 \\
+  900 & 3.153e+04 & 3.153e+04 \\
+  999 & 3.362e+04 & 3.362e+04 \\\hline
+\end{tabular}
+
+Norma min. - Erro relativo - n=1000
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 1.856e-14 & 9.731e-17 \\
+  100 & 5.938e-14 & 5.548e-16 \\
+  500 & 6.547e-14 & 1.065e-15 \\
+  900 & 4.270e-14 & 3.045e-15 \\
+  999 & 2.246e-13 & 1.049e-14 \\\hline
+\end{tabular}
+
+Norma min. - Tempo- n=1000
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 6.345e-03 & 1.496e-05 \\
+  100 & 9.383e-03 & 1.687e-03 \\
+  500 & 3.199e-02 & 1.543e-02 \\
+  900 & 1.076e-01 & 3.587e-02 \\
+  999 & 4.632e-02 & 3.947e-02 \\\hline
+\end{tabular}
+
+Norma min. - Norma de x - n=10000
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 5.223e+03 & 5.223e+03 \\
+  1000 & 1.057e+05 & 1.057e+05 \\
+  5000 & 2.352e+05 & 2.352e+05 \\
+  9000 & 3.139e+05 & 3.139e+05 \\
+  9999 & 3.326e+05 & 3.326e+05 \\\hline
+\end{tabular}
+
+Norma min. - Erro relativo - n=10000
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 2.800e-13 & 2.175e-16 \\
+  1000 & 1.094e-12 & 9.336e-16 \\
+  5000 & 7.249e-13 & 2.071e-15 \\
+  9000 & 6.436e-13 & 4.386e-15 \\
+  9999 & 7.937e-12 & 1.333e-13 \\\hline
+\end{tabular}
+
+Norma min. - Tempo- n=10000
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 3.754e+00 & 6.010e-05 \\
+  1000 & 5.043e+00 & 7.317e-01 \\
+  5000 & 1.287e+01 & 1.401e+01 \\
+  9000 & 2.602e+01 & 3.475e+01 \\
+  9999 & 3.013e+01 & 4.064e+01 \\\hline
 \end{tabular}
 
