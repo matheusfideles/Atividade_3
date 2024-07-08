@@ -37,11 +37,11 @@ function runNM(vec_matrizes,b_vec,x_vec)
         result_t=zeros(length(vec_matrizes[i]), 3)  #Matriz para tempo
         result_er=zeros(length(vec_matrizes[i]), 3) #Matriz para o erro relativo
         for j in eachindex(vec_matrizes[i])  #Iterando pelas matrizes internas
-            m=size(vec_matrizes[i][j],1)  #Número de linhas
+            m,n=size(vec_matrizes[i][j])  #Dimensão da matriz
             b=b_vec[i][j] #Vetor b do sistema
-            x=x_vec[i][j]  #Solução exata
+            x=x_vec[i][j] #Solução exata
             norma = zeros(2); t=zeros(2); erro=zeros(2)  #Vetor para norma da solução, tempo e erro relativo
-            for k in 1:2  #Iterando para cada método em estudo e guardando tempo/norma
+            for k in 1:2 #Iterando para cada método em estudo e guardando tempo/norma
                 t[k] = @elapsed x_resp=normaMin(vec_matrizes[i][j],b,k)
                 norma[k]=norm(x_resp); erro[k]=norm(x_resp-x)/norm(x)
             end
@@ -57,3 +57,12 @@ function runNM(vec_matrizes,b_vec,x_vec)
     end
     return result_normx, result_erro, result_tempo # Retornando as listas de matrizes
 end
+
+#=if m!=length(b)
+    println("---------------------------------")
+    println("($i,$j)")
+    display(x)
+    display(b)
+    display(vec_matrizes[i][j])
+    println("---------------------------------")
+end=#

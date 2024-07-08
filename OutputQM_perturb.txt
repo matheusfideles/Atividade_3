@@ -2,55 +2,15 @@ Quad. min - Norma do resíduo - m=10
 \begin{tabular}{rrrr}
   \hline
   \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
-  5 & 1.243e+00 & 1.243e+00 & 1.243e+00 \\
-  9 & 1.071e-01 & 1.071e-01 & 1.071e-01 \\\hline
+  5 & 1.269e+00 & 1.269e+00 & 1.269e+00 \\
+  9 & 1.724e-01 & 1.724e-01 & 1.724e-01 \\\hline
 \end{tabular}
 
 Quad. min. - Tempo de execução - m=10
 \begin{tabular}{rrrr}
   \hline
   \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
-  5 & 4.748e-05 & 7.215e-06 & 2.589e-05 \\
-  9 & 5.334e-06 & 3.153e-06 & 1.498e-05 \\\hline
-\end{tabular}
-
-Quad. min - Norma do resíduo - m=100
-\begin{tabular}{rrrr}
-  \hline
-  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
-  10 & 5.302e+00 & 5.302e+00 & 5.302e+00 \\
-  50 & 4.104e+00 & 4.104e+00 & 4.104e+00 \\
-  90 & 1.190e+00 & 1.190e+00 & 1.190e+00 \\
-  99 & 6.485e-01 & 6.485e-01 & 6.485e-01 \\\hline
-\end{tabular}
-
-Quad. min. - Tempo de execução - m=100
-\begin{tabular}{rrrr}
-  \hline
-  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
-  10 & 1.012e-05 & 2.814e-06 & 1.955e-05 \\
-  50 & 3.708e-05 & 2.559e-05 & 1.004e-04 \\
-  90 & 2.412e-04 & 1.828e-04 & 1.979e-04 \\
-  99 & 8.096e-05 & 6.709e-05 & 2.078e-04 \\\hline
-\end{tabular}
-
-Quad. min - Norma do resíduo - m=1000
-\begin{tabular}{rrrr}
-  \hline
-  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
-  100 & 1.736e+01 & 1.736e+01 & 1.736e+01 \\
-  500 & 1.237e+01 & 1.237e+01 & 1.237e+01 \\
-  900 & 6.151e+00 & 6.151e+00 & 6.151e+00 \\
-  999 & 9.342e-01 & 9.342e-01 & 9.342e-01 \\\hline
-\end{tabular}
-
-Quad. min. - Tempo de execução - m=1000
-\begin{tabular}{rrrr}
-  \hline
-  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
-  100 & 1.847e-04 & 1.928e-04 & 1.172e-03 \\
-  500 & 3.188e-03 & 2.620e-03 & 7.946e-03 \\
-  900 & 1.142e-02 & 1.182e-02 & 1.764e-02 \\
-  999 & 1.547e-02 & 1.110e-02 & 2.240e-02 \\\hline
+  5 & 2.394e-05 & 8.410e-06 & 2.664e-05 \\
+  9 & 6.028e-06 & 3.261e-06 & 1.677e-05 \\\hline
 \end{tabular}
 

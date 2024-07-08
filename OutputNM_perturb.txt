@@ -2,83 +2,23 @@ Norma min. - Norma de x - n=10
 \begin{tabular}{rrr}
   \hline
   \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  5 & 1.294e+02 & 1.294e+02 \\
-  9 & 2.378e+02 & 2.378e+02 \\\hline
+  5 & 4.616e+02 & 4.616e+02 \\
+  9 & 1.242e+03 & 1.242e+03 \\\hline
 \end{tabular}
 
 Norma min. - Erro relativo - n=10
 \begin{tabular}{rrr}
   \hline
   \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  5 & 3.271e-16 & 5.424e-16 \\
-  9 & 8.413e-16 & 2.008e-15 \\\hline
+  5 & 9.810e-01 & 9.810e-01 \\
+  9 & 5.792e+00 & 5.792e+00 \\\hline
 \end{tabular}
 
 Norma min. - Tempo- n=10
 \begin{tabular}{rrr}
   \hline
   \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  5 & 1.231e-05 & 1.822e-05 \\
-  9 & 8.075e-06 & 1.411e-05 \\\hline
-\end{tabular}
-
-Norma min. - Norma de x - n=100
-\begin{tabular}{rrr}
-  \hline
-  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  10 & 1.082e+03 & 1.082e+03 \\
-  50 & 2.549e+03 & 2.549e+03 \\
-  90 & 3.092e+03 & 3.092e+03 \\
-  99 & 3.411e+03 & 3.411e+03 \\\hline
-\end{tabular}
-
-Norma min. - Erro relativo - n=100
-\begin{tabular}{rrr}
-  \hline
-  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  10 & 3.682e-15 & 4.030e-16 \\
-  50 & 5.637e-15 & 6.106e-16 \\
-  90 & 6.381e-15 & 3.784e-15 \\
-  99 & 3.611e-14 & 1.823e-14 \\\hline
-\end{tabular}
-
-Norma min. - Tempo- n=100
-\begin{tabular}{rrr}
-  \hline
-  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  10 & 1.040e-04 & 2.169e-05 \\
-  50 & 1.558e-04 & 1.455e-04 \\
-  90 & 2.434e-04 & 2.472e-04 \\
-  99 & 2.679e-04 & 2.782e-04 \\\hline
-\end{tabular}
-
-Norma min. - Norma de x - n=1000
-\begin{tabular}{rrr}
-  \hline
-  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  100 & 1.108e+04 & 1.108e+04 \\
-  500 & 2.419e+04 & 2.419e+04 \\
-  900 & 3.216e+04 & 3.216e+04 \\
-  999 & 3.267e+04 & 3.267e+04 \\\hline
-\end{tabular}
-
-Norma min. - Erro relativo - n=1000
-\begin{tabular}{rrr}
-  \hline
-  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  100 & 2.284e-13 & 9.268e-16 \\
-  500 & 8.866e-14 & 1.139e-15 \\
-  900 & 4.351e-14 & 2.873e-15 \\
-  999 & 1.976e-13 & 3.537e-14 \\\hline
-\end{tabular}
-
-Norma min. - Tempo- n=1000
-\begin{tabular}{rrr}
-  \hline
-  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
-  100 & 8.097e-03 & 1.643e-03 \\
-  500 & 1.765e-02 & 1.568e-02 \\
-  900 & 3.285e-02 & 3.645e-02 \\
-  999 & 4.535e-02 & 4.369e-02 \\\hline
+  5 & 9.333e-06 & 3.386e-05 \\
+  9 & 5.997e-06 & 1.107e-05 \\\hline
 \end{tabular}
 

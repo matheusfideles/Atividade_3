@@ -1,5 +1,7 @@
 include("Tests.jl")
 include("Matrices.jl")
+include("Methods.jl")
+
 using Suppressor, DataFrames, PrettyTables, Printf
 
 #Função para montar as tabelas e colocar em um arquivo de texto
@@ -107,8 +109,15 @@ function runTest(mVec)
     bNM,xNM=testbNM(transposeAll(vec))
 
     #Executando
-    tables(vec, bQM, bNM, xNM, "OutputQM_normal.txt", "OutputNM_normal.txt")
+    tables(vec, bQM,bNM,xNM, "OutputQM_normal.txt", "OutputNM_normal.txt")
+    
+    #Tirando o referente ao caso com n=1/m=1 para as matrizes perturbadas no prob. de norma minima
+    for i in eachindex(mVec)
+        popfirst!(bNM[i]); popfirst!(xNM[i])
+    end
+    
     tables(vec_perturb, bQM, bNM, xNM, "OutputQM_perturb.txt", "OutputNM_perturb.txt")
 end
 
-mVec=[10,100,1000]
+mVec=[10,100,1000,10000]
+runTest(mVec)
