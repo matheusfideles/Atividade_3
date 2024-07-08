@@ -1,12 +1,13 @@
 include("Tests.jl")
+include("Matrices.jl")
 using Suppressor, DataFrames, PrettyTables, Printf
 
 #Função para montar as tabelas e colocar em um arquivo de texto
 #Assumindo vec_matrizes contendo apenas matrizes em pé (m>n)
-function tables(vec_matrizes)
+function tables(vec_matrizes,bQM,bNM,xNM,tituloQM="OutputQM.txt",tituloNM="OutputNM.txt")
     #Obtendo os resultados -> Matriz já tem a primeira coluna com os n's que variam por conveniencia 
-    resultQMres,resultQMtempo=runQM(vec_matrizes)
-    resultNMnorm, resultNMerro, resultNMtempo=runNM(transposeAll(vec_matrizes))
+    resultQMres,resultQMtempo=runQM(vec_matrizes,bQM)
+    resultNMnorm,resultNMerro,resultNMtempo=runNM(transposeAll(vec_matrizes),bNM,xNM)
 
     #Passando os dados do problema de quadrados mínimos para DataFrame
     header=["n", "Direto", "Cholesky", "QR"]
@@ -45,5 +46,69 @@ function tables(vec_matrizes)
             resultNMtempo[i][!, col]=string.(@sprintf("%.3e", x) for x in resultNMtempo[i][!,col])
         end
     end
-    return resultNMnorm, resultNMerro, resultNMtempo
+    
+    #Coletando o número de m's usados
+    m=length(vec_matrizes)
+
+    #Printando e colocando em arquivos de texto
+    open(tituloQM,"w") do io
+        for i=1:m
+            #Para o problema de quadrados mínimos
+            #Cabeçalho
+            write(io,"Quad. min - Norma do resíduo - m="*string(size(vec_matrizes[i][1],1)))
+            write(io,'\n')
+            #Contéudo
+            latex_tab=@capture_out pretty_table(resultQMres[i],backend=Val(:latex),header=names(resultQMres[i]))
+            write(io,latex_tab); write(io,'\n')
+            
+            #Cabeçalho
+            write(io,"Quad. min. - Tempo de execução - m="*string(size(vec_matrizes[i][1],1)))
+            write(io,'\n')
+            #Conteúdo
+            latex_tab=@capture_out pretty_table(resultQMtempo[i],backend=Val(:latex),header=names(resultQMtempo[i]))
+            write(io,latex_tab); write(io,'\n')
+        end
+    end
+
+    open(tituloNM,"w") do io
+        for i=1:m
+            #Para o problema de norma mínima
+            #Cabeçalho
+            write(io,"Norma min. - Norma de x - n="*string(size(vec_matrizes[i][1],1)))
+            write(io,'\n')
+            #Contéudo
+            latex_tab=@capture_out pretty_table(resultNMnorm[i],backend=Val(:latex),header=names(resultNMnorm[i]))
+            write(io,latex_tab); write(io,'\n')
+            
+            #Cabeçalho
+            write(io,"Norma min. - Erro relativo - n="*string(size(vec_matrizes[i][1],1)))
+            write(io,'\n')
+            #Contéudo
+            latex_tab=@capture_out pretty_table(resultNMerro[i],backend=Val(:latex),header=names(resultNMerro[i]))
+            write(io,latex_tab); write(io,'\n')
+
+            #Cabeçalho
+            write(io,"Norma min. - Tempo- n="*string(size(vec_matrizes[i][1],1)))
+            write(io,'\n')
+            #Contéudo
+            latex_tab=@capture_out pretty_table(resultNMtempo[i],backend=Val(:latex),header=names(resultNMtempo[i]))
+            write(io,latex_tab); write(io,'\n')
+        end
+    end    
 end
+
+#Função para rodar o caso normal e o caso perturbado e salvar tudo
+function runTest(mVec)
+    #Gerando as matrizes de teste
+    vec,vec_perturb=testMatrices(mVec)
+
+    #Os vetores de teste
+    bQM=testb(mVec)
+    bNM,xNM=testbNM(transposeAll(vec))
+
+    #Executando
+    tables(vec, bQM, bNM, xNM, "OutputQM_normal.txt", "OutputNM_normal.txt")
+    tables(vec_perturb, bQM, bNM, xNM, "OutputQM_perturb.txt", "OutputNM_perturb.txt")
+end
+
+mVec=[10,100,1000]

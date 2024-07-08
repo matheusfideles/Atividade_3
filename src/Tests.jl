@@ -2,15 +2,16 @@ include("Matrices.jl")
 include("Methods.jl")
 #Função para executar os testes planejados para o problema de quadrados minimos a partir de um vetor com as matrizes
 #Retorna um vetor de tabelas cuja primeira coluna são os valores de n
-function runQM(vec_matrizes)
+#Recebe o vetor das matrizes e o vetor dos b's
+function runQM(vec_matrizes,b_vec)
     result_axb = []  #Lista para armazenar as matrizes de norma de resíduo
     result_tempo = []  #Lista para armazenar as matrizes de tempo
     for i in eachindex(vec_matrizes)  #Iterando pelo vetor externo
         result_x = zeros(length(vec_matrizes[i]), 4)  #Matriz para ||Ax-b||
         result_t = zeros(length(vec_matrizes[i]), 4)  #Matriz para tempo
+        b = b_vec[i]  #Vetor de testes, do sistema Ax=b
         for j in eachindex(vec_matrizes[i])  #Iterando pelas matrizes internas
-            m=size(vec_matrizes[i][j],1); n=size(vec_matrizes[i][j],2)  #Dimensões da matriz
-            b = testb(m)  #Vetor de testes, do sistema Ax=b
+            n=size(vec_matrizes[i][j],2)  #Dimensões da matriz
             r = zeros(3); t=zeros(3)  #Vetor para norma de resíduo e vetor para Tempo
             for k in 1:3  #Iterando para cada método em estudo e guardando tempo/residuo
                 t[k] = @elapsed r[k] = res(vec_matrizes[i][j], b, quadMin(vec_matrizes[i][j], b, k))
@@ -27,17 +28,18 @@ function runQM(vec_matrizes)
 end
 
 #Função que faz a mesma coisa que runQM, mas em vez disso considera os problemas de norma mínima e os métodos que usamos para resolver
-function runNM(vec_matrizes)
-    result_normx = []  #Lista para armazenar as matrizes de norma de resíduo
-    result_tempo = []  #Lista para armazenar as matrizes de tempo
-    result_erro = [] #Lista para armazenar os erros relativos
+function runNM(vec_matrizes,b_vec,x_vec)
+    result_normx=[]  #Lista para armazenar as matrizes de norma de resíduo
+    result_tempo=[]  #Lista para armazenar as matrizes de tempo
+    result_erro=[] #Lista para armazenar os erros relativos
     for i in eachindex(vec_matrizes)  #Iterando pelo vetor externo
-        result_x = zeros(length(vec_matrizes[i]), 3)  #Matriz para ||x||
-        result_t = zeros(length(vec_matrizes[i]), 3)  #Matriz para tempo
-        result_er= zeros(length(vec_matrizes[i]), 3) #Matriz para o erro relativo
+        result_x=zeros(length(vec_matrizes[i]), 3)  #Matriz para ||x||
+        result_t=zeros(length(vec_matrizes[i]), 3)  #Matriz para tempo
+        result_er=zeros(length(vec_matrizes[i]), 3) #Matriz para o erro relativo
         for j in eachindex(vec_matrizes[i])  #Iterando pelas matrizes internas
-            m,_ = size(vec_matrizes[i][j])  #Dimensões da matriz
-            b,x = testbNM(vec_matrizes[i][j])  #Vetor de testes, do sistema Ax=b
+            m=size(vec_matrizes[i][j],1)  #Número de linhas
+            b=b_vec[i][j] #Vetor b do sistema
+            x=x_vec[i][j]  #Solução exata
             norma = zeros(2); t=zeros(2); erro=zeros(2)  #Vetor para norma da solução, tempo e erro relativo
             for k in 1:2  #Iterando para cada método em estudo e guardando tempo/norma
                 t[k] = @elapsed x_resp=normaMin(vec_matrizes[i][j],b,k)

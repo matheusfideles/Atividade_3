@@ -37,10 +37,37 @@ function testMatrices(mVec)
     return vec_matrizes, vec_matrizes_p
 end
 
-#Função que retorna o vetor b de testes e a solução do sistema, que é um ponto aleatório
-function testb(n)
-    b=2*rand(n).-1
-    return b
+#Função que retorna o vetor b de testes para o problema de quad. Min
+#Número de linhas é fixo e o que varia é o número de colunas
+#Logo, vamos fixar o b para um dado m e n variando, em vez de gerar um diferente para cada possível par (m,n)
+function testb(mVec)
+    #Gerando os b's para o quad. minimos
+    b_vec=[2*rand(m).-1 for m in mVec]
+    return b_vec
+end
+
+#Função que retorna o vetor com os x*=A^tλ* e um vetor b=Ax* -> Para o problema de norma mínima
+#Nesse caso, pelo exemplo, o número de linhas vai variar em função de um m fixo
+#Vamos gerar um b diferente para cada par (m,n)
+function testbNM(vec_matrizes)
+    #Gerando os x* e b
+    x_vec=[]; b_vec=[]
+    for i in eachindex(vec_matrizes)
+        xs=[]; bs=[]
+        for j in eachindex(vec_matrizes[i])
+            A=vec_matrizes[i][j]; m=size(A,1)  
+            push!(xs,A'*(2*rand(m).-1))
+            push!(bs,A*xs[j])
+        end
+        push!(x_vec,xs)
+        push!(b_vec,bs)
+    end
+    return b_vec, x_vec
+end
+
+#Função que dá a norma do residuo
+function res(A,b,x)
+    return norm(A*x-b)
 end
 
 #Função que transpõe todas as matrizes em uma coleção devolvida por testMatrices
@@ -53,17 +80,4 @@ function transposeAll(vec_matrizes)
         end
     end
     return vec_transp
-end
-
-#Função que retorna um vetor x*=A^tλ* e um vetor b=Ax* 
-function testbNM(A)
-    m=size(A,1);
-    λ=2*rand(m).-1;
-    x=A'*λ; b=A*x
-    return b,x
-end
-
-#Função que dá a norma do residuo
-function res(A,b,x)
-    return norm(A*x-b)
 end

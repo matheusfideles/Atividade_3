@@ -1,0 +1,27 @@
+Norma min. - Norma de x - n=10
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 9.293e+01 & 9.293e+01 \\
+  5 & 3.216e+02 & 3.216e+02 \\
+  9 & 1.811e+02 & 1.811e+02 \\\hline
+\end{tabular}
+
+Norma min. - Erro relativo - n=10
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 2.703e-16 & 2.241e-16 \\
+  5 & 3.953e-16 & 1.852e-16 \\
+  9 & 1.754e-15 & 8.436e-16 \\\hline
+\end{tabular}
+
+Norma min. - Tempo- n=10
+\begin{tabular}{rrr}
+  \hline
+  \textbf{m} & \textbf{Sela} & \textbf{QR} \\\hline
+  1 & 2.606e-02 & 1.699e-05 \\
+  5 & 5.438e-06 & 1.694e-05 \\
+  9 & 8.614e-06 & 1.693e-05 \\\hline
+\end{tabular}
+

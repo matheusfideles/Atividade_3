@@ -1,0 +1,18 @@
+Quad. min - Norma do resíduo - m=10
+\begin{tabular}{rrrr}
+  \hline
+  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
+  1 & 1.799e+00 & 1.799e+00 & 1.799e+00 \\
+  5 & 1.074e+00 & 1.074e+00 & 1.074e+00 \\
+  9 & 6.793e-02 & 6.793e-02 & 6.793e-02 \\\hline
+\end{tabular}
+
+Quad. min. - Tempo de execução - m=10
+\begin{tabular}{rrrr}
+  \hline
+  \textbf{n} & \textbf{Direto} & \textbf{Cholesky} & \textbf{QR} \\\hline
+  1 & 1.796e-02 & 1.329e-05 & 1.544e-05 \\
+  5 & 1.041e-05 & 2.757e-06 & 1.532e-05 \\
+  9 & 5.465e-06 & 3.091e-06 & 1.735e-05 \\\hline
+\end{tabular}
+
